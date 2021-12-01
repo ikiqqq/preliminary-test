@@ -8,6 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      role: {
+        type: Sequelize.ENUM('admin', 'user'),
+        defaultValue: 'user'
+      },
       email: {
         type: Sequelize.STRING
       },
