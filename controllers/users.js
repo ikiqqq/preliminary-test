@@ -61,6 +61,7 @@ module.exports = {
         email: body.email,
         password: encrypt(body.password),
         confirmPassword: encrypt(body.password),
+        fullName: body.fullName
       });
 
       const payload = {
