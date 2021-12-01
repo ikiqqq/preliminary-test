@@ -9,7 +9,6 @@ Database connection using postgreSQL
 addjust at .env
 
 JWT_SECRET=pewdiepie # opt for more secure secret
-JWT_EXPIRE=30d
 
 Installing the dependencies
 npm i
