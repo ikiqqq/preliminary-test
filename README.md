@@ -3,7 +3,8 @@ Clone the backend repo
 git clone https://github.com/ikiqqq/preliminary-test.git
 
 # navigate to the root directory
-cd oreliminary-test
+cd preliminary-test
+checkou to branch master
 Database connection using postgreSQL
 
 addjust at .env
