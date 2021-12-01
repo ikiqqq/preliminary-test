@@ -4,6 +4,7 @@ const Joi = require('joi');
 const hbs = require("nodemailer-express-handlebars");
 const nodemailer = require("nodemailer");
 const path = require("path");
+const users = require("./users");
 
 module.exports = {
     sendTask: async (req, res) => {
@@ -11,10 +12,10 @@ module.exports = {
         const userId = req.users.id
         try {
             const schema = Joi.object({
-                userId: Joi.number(),
-                email: Joi.string().email().required(),
-                task: Joi.string(), required()
-            }),
+              userId : Joi.number().required(),
+              email : Joi.string().email().required(),
+              task : Joi.string().required()
+            });
 
             const check = schema.validate({
                 userId: userId,
@@ -147,10 +148,10 @@ module.exports = {
         const userId = req.users.id
         try {
             const schema = Joi.object({
-                userId: Joi.number(),
-                email: Joi.string().email().required(),
-                task: Joi.string(), required()
-            })
+              userId : Joi.number().required(),
+              email : Joi.string().email().required(),
+              task : Joi.string().required()
+            });
 
             const check = schema.validate({
                 userId: userId,
@@ -238,7 +239,7 @@ module.exports = {
                 },
                 {
                     where: {
-                        userId = userId
+                        userId
                     }
                 }
             );
